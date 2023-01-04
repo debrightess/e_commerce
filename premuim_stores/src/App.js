@@ -33,9 +33,10 @@ const App = () => {
 
   return (
     <div>
-      <Navbar totalItems={cart.total_items} />
       <BrowserRouter>
+        <Navbar totalItems={cart.total_items} />
         <Routes>
+          {/* <Route path='/' element={<Navbar totalItems={cart.total_items} />}> */}
           <Route
             index
             element={
@@ -43,6 +44,7 @@ const App = () => {
             }
           />
           <Route path='cart' element={<Cart cart={cart} />} />
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </div>
