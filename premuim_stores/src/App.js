@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import { commerce } from './lib/commerce'
-import { Products, Navbar, Cart } from './components'
+import { Products, Navbar, Cart, Checkout } from './components'
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -72,6 +72,7 @@ const App = () => {
               />
             }
           />
+          <Route path='checkout' element={<Checkout />} />
           {/* </Route> */}
         </Routes>
       </BrowserRouter>
